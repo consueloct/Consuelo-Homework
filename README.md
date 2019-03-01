@@ -4,7 +4,7 @@ To build:
 Download and build the .sln file in Visual Studio.
 
 To test:
-The local database will be empty by default. Build the solution and run it under Visual Studio.
+The local database will be empty by default, test in the order described below. Build the solution and run it under Visual Studio.
 
 1. Test Deparments 
 
