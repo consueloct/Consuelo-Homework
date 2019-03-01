@@ -13,6 +13,8 @@ namespace WebApplication5.Models
         public int ID { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
         public string DepartmentID { get; set; }
 
         public IEnumerable<SelectListItem> DepartmentList { get; set; }

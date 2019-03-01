@@ -6,6 +6,7 @@
 {
     <div class="form-group">
         <div id="divDepartment" class="col-md-10">
+            <br />
             Department:
             @Html.DropDownListFor(m => m.DepartmentID, Model.DepartmentListView, "Select One")
         </div>
@@ -13,35 +14,6 @@
     <div class="form-group">
         <div id="divEmployees" class="col-md-10">
             @{ Html.RenderAction("GetDepartmentEmployee");}
-            @*<table class="table">
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Last Name
-                </th>
-                <th>
-                    Department
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model.DEEmployeeList)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DepartmentID)
-                    </td>
-                </tr>
-            }
-        </table>*@
         </div>
     </div>
     <br />
@@ -54,7 +26,6 @@
 }
     <script type="text/javascript">
         $(document).ready(function () {
-        //LoadData();
             $("#btnSearch").click(function () {   
                 var url = '@Url.Action("GetDepartmentEmployee", "DepartmentEmployee")' + '/' + $("#DepartmentID option:selected").val();
                 $('#divEmployees').load(url);
